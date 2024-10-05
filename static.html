@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Static Classwork</title>
+    <h1>Static Classwork</h1>
+</head>
+<body>
+    <p id="hello"></p>
+    <p id="welcome"></p>
+    <p id="hi"></p>
+    <script>
+        class Student{
+            constructor(name){
+                this.studentname = name;
+            
+            }
+            static hello() {
+                return "Hello ";
+            }
+            static welcome(x) {
+                return "Welcome " + x.studentname;
+            }
+            hi() {
+                return "Hi " ;
+            }
+        }
+        myname= new Student("Mirakh");
+        document.getElementById("hello").innerHTML= Student.hello(myname);
+        document.getElementById("welcome").innerHTML= Student.welcome(myname);
+        document.getElementById("hi").innerHTML= myname.hi();
+    </script>
+</body>
+</html>
